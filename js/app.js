@@ -77,8 +77,8 @@ function makeActive(){
     for (const section of sections) {
         const box = section.getBoundingClientRect();
         // section.target.classList.remove("your-active-class");
-//Find a value that works best, but 150 seems to be a good start.
-        if (box.top <= 150 && box.bottom >= 150) {
+//Find a value that works best, but 110 seems to be a good start.
+        if (box.top <= 110 && box.bottom >= 110) {
 //apply active state on current section and corresponding Nav link
             section.classList.add("your-active-class");
         } else {
@@ -90,6 +90,15 @@ function makeActive(){
 
 // Make sections active
 document.addEventListener("scroll", makeActive);
+
+// hover on mouse over the list item
+myList.addEventListener("mouseover", (evt) => {
+    evt.target.style.hover => {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+    };
+});
 
 // Scroll to section on link click
 myList.addEventListener("click", (toSection) => {
